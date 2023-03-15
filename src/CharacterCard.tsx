@@ -14,8 +14,8 @@ const CharacterCard: React.FC<CharacterCardProps> = ({ playerName }) => {
   useEffect(() => {
     (async () => {
       try {
-        const profilePictureUrl = await getProfilePicture();
-        setImageUrl(profilePictureUrl);
+        // const profilePictureUrl = await getProfilePicture();
+        setImageUrl("https://labs.openai.com/api/labs/public/generations/generation-OgEdnmwNhSsc5HOINEZgy4bq/download");
       } catch (error) {
         console.error("Failed to fetch profile picture:", error);
       }

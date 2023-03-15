@@ -14,8 +14,11 @@ interface ChatMessageListProps {
    
     if (messages.messages.length === 0) {
         return (
-        <div>
+            <div className="character-card-grid">
         <CharacterCard playerName="John Snow"></CharacterCard>
+        <CharacterCard playerName="Joe Biddin"></CharacterCard>
+        <CharacterCard playerName="Elon Tusk"></CharacterCard>
+        <CharacterCard playerName="Jeffery Preston Bzos"></CharacterCard>
         </div>
         )
       } else {
