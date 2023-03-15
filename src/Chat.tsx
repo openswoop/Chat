@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ChatInput from "./ChatInput";
 import ChatMessage from "./ChatMessage";
 import { sendChatMessage } from "./api";
+import ChatThread from "./ChatThread";
+
 
 interface ChatMessageData {
   id: number;
@@ -51,9 +53,8 @@ const Chat: React.FC = () => {
       </div>
       <div className="chatInputMessages">
       <div className="chat-messages">
-        {messages.map(({ id, sender, message }) => (
-          <ChatMessage key={id} sender={sender} message={message} />
-        ))}
+        
+       <ChatThread messages={messages}></ChatThread>
       </div>
       <ChatInput onSubmit={handleMessageSubmit} />
     </div>

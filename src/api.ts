@@ -21,3 +21,15 @@ export async function sendChatMessage(message: string): Promise<string> {
   const data = await response.json();
   return data.response;
 }
+
+export async function getProfilePicture(): Promise<string> {
+    const response = await fetch(`${API_URL}/generateProfilePicture`);
+  
+    if (!response.ok) {
+      throw new Error(`API request failed: ${response.statusText}`);
+    }
+  
+    const data = await response.json();
+    return data.image_url;
+  }
+  
